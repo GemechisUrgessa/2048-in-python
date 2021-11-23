@@ -33,7 +33,7 @@ def grid_style():
             else:
                 d+=" "* ( largernum- len(str(j))) +str(j) + "|"
         print(d)
-# here goes our function to merge left, and we use loops for itering through the row.
+# here goes our function to merge left, and we use loops for iterating through the row.
 def rowmerge_left(row):
     j = 0
     while j <3 :
@@ -73,7 +73,7 @@ def merge_right(board):
     for i in range(4):
         board[i]=rowmerge_right(board[i])
     return board
-# in order to merge up and down we have to transpose our grid for it will be esay to merge that way.
+# in order to merge up and down we have to transpose our grid for it will be easy to merge that way.
 # so we transpose it then we merge either right or left then we transpose it back.   
 def transpose(board):
     i = 0
@@ -115,14 +115,14 @@ def won():
         for j in range(4):
             if grid[i][j] == 2048:
                 return True
-# here we cteate a function to random numbers then assign 2 or 4 for every values it generates and we give some pirority for 2(with no reason). 
+# here we create a function to random numbers then assign 2 or 4 for every values it generates and we give some priority for 2(with no reason). 
 def randomnum_generator ():
     randnum = random.randint(0, 3)
     if (randnum>=0 and randnum <=2):
         return 2
     else:
         return 4
-# this function detectes a random entry with value 0 then insert the values 4 and 2.       
+# this function detects a random entry with value 0 then insert the values 4 and 2.       
 def numgenerator():
     row = random.randint(0, 3)
     column = random.randint(0, 3) 
@@ -136,7 +136,7 @@ i = 0
 while i < 4:
     grid.append([0]*4)
     i +=1
-# this function will make sure that every time random number is generated and assignes 2 or 4 for it there will be two numbers((2,2) or (2,4) or (4,4)) to be viewed.
+# this function will make sure that every time random number is generated and assigns 2 or 4 for it there will be two numbers((2,2) or (2,4) or (4,4)) to be viewed.
 for i in range(2):
     row = random.randint(0, 3)
     column = random.randint(0, 3)
@@ -152,7 +152,7 @@ def score():
     print()
     print("Your total score is: ",total)
     print()
-# here goes then intoductory parts for our plays.
+# here goes then introductory parts for our plays.
 print("#DEVELOPED BY Max")
 print("Hi there, thanks for choosing to play this game hope you will enjoy it.")
 print("The name of this game is called 2048.\nThe game is all about merging the same numbers u find until you score 2048 in a single element of the grid.\nTo play this game all you need to do is to follow the instruction, which is easy: ")
@@ -169,7 +169,7 @@ print()
 to_start= input("To start the game press Y for Yes or N for No:")
 # we will use if statement and follow what the player desires.
 if to_start == "Y" or to_start == "y":
-    print("Welcome to my game, following the instructions listed above enjoye the game! ")
+    print("Welcome to my game, following the instructions listed above enjoy the game! ")
     print()
     grid_style()
     # here goes the function for our moves plus we can call it our main function fairly we can say in which every thing is done
@@ -191,7 +191,7 @@ if to_start == "Y" or to_start == "y":
                 validInput = False
 
             if not validInput:
-                print("Worng move!")
+                print("Wrong move!")
             else:
                 if grid == tempboard:
                     print("No further possible move, try another!")
